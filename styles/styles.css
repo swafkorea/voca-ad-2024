@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li,
+ol {
+  list-style: none;
+}
+
+.ad li {
+   display: flex;
+   flex-direction: column;
+}
+
+.ad li.last {
+  flex-direction: row;
+}
+
+.ad img {
+  float: left;
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.ad li.last > img {
+  width: 80.4%;
+}
+
+
+.pointer {
+  cursor: pointer;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}

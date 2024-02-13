@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <style>
+      html,
+      .no-scroll {
+        overflow: hidden;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        height: 100vh;
+      }
+
+      iframe {
+        flex: 1;
+        width: 100%;
+      }
+
+      footer {
+        flex: 0 0 80px;
+      }
+    </style>
+  </head>
+  <body class="no-scroll">
+    <iframe
+      src="ad.html"
+      frameborder="0"
+    ></iframe>
+    <footer>
+      <p>footer : © 2024</p>
+    </footer>
+  </body>
+</html>
