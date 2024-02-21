@@ -1,8 +1,8 @@
-function openWechat() {
+function openQr(type) {
 	Swal.fire({
-		imageUrl: 'images/wechat.jpg',
-		imageWidth: 313,
-		imageHeight: 426,
+		imageUrl: `images/qr-${type}.jpg`,
+		imageWidth: 360,
+		imageHeight: 360,
 		imageAlt: 'Custom image',
 	});
 }
