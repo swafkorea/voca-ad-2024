@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="cn">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>地上最大的百家乐</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-    <style>
-      html,
-      .no-scroll {
-        overflow: hidden;
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>地上最大的百家乐</title>
+		<link rel="stylesheet" href="styles/styles.css" />
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="scripts/ad.js"></script>
+		<style>
+      :root {
+        --bg-color: #ff0000;
+        --secondary-color: #0000ff;
       }
 
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: stretch;
-        height: 100vh;
-      }
+			html,
+			.no-scroll {
+				overflow: hidden;
+			}
 
-      iframe {
-        flex: 1;
-        width: 100%;
-      }
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: stretch;
+				align-items: center;
+				height: 100vh;
+			}
 
-      footer {
-        flex: 0 0 80px;
-      }
-    </style>
-  </head>
-  <body class="no-scroll">
-    <iframe
-      src="ad.html"
-      frameborder="0"
-    ></iframe>
-    <footer>
-      <p>footer : © 2024</p>
-    </footer>
-  </body>
+			iframe {
+				flex: 1;
+				width: 100%;
+			}
+
+			footer {
+        /* position: fixed;
+        bottom: 0; */
+				display: flex;
+				align-items: center;
+				margin-top: 1rem;
+				flex: 0 0 80px;
+			}
+
+			.footer-icon {
+        margin-left: 1rem;
+			}
+			.footer-icon img {
+				height: 60px;
+				border-radius: 10px;
+			}
+		</style>
+	</head>
+	<body class="no-scroll">
+		<iframe src="ad.html" frameborder="0"></iframe>
+		<footer>
+			<img class="footer-title" src="images/ad-footer.jpg" />
+			<div class="spacer"></div>
+			<a class="pointer footer-icon" onClick="openQr('wechat')">
+				<img src="images/icon-wechat.png" />
+			</a>
+			<a class="pointer footer-icon" onClick="openQr('telegram')">
+				<img src="images/icon-telegram.png" />
+			</a>
+		</footer>
+	</body>
 </html>
