@@ -65,3 +65,20 @@ body.no-scroll {
     width: 50%;
   }
 }
+
+#chat-widget-container {
+  bottom: 100px !important;
+}
+
+/* width가 600px 미만일 때 처리 */
+@media (max-width: 600px) {
+  footer {
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .footer-title {
+    height: 24px;
+  }
+}
