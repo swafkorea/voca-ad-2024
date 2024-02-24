@@ -1,57 +1,100 @@
 @charset "utf-8";
 
-html,
-body {
+:root {
+  --bg-color: #f9f7f7;
+  --footer-height: 80px;
+}
+
+@layer reset, base, libs, overrides, utils;
+
+@layer reset {}
+
+@layer base {
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  li,
+  ol {
+    list-style: none;
+  }
+}
+
+@layer libs {}
+
+@layer overrides {
+  #chat-widget-container {
+    bottom: 100px !important;
+  }
+}
+
+@layer utils {
+  .ad li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ad li.last {
+    flex-direction: row;
+  }
+
+  .ad img {
+    float: left;
+    width: 100%;
+    height: auto;
+    border: 0;
+  }
+
+  .ad li.last>img {
+    width: 80.4%;
+  }
+
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+}
+
+/* sweetalert2 */
+.qr-popup {
+  width: fit-content;
+  height: fit-content;
+}
+
+.qr-img {
+  margin-top: 24;
+  margin-bottom: 0;
+}
+
+.swal2-html-container.qr-content {
   margin: 0;
-  padding: 0;
-  background-color: #f9f7f7;
-  display: flex;
-  flex-direction: column;
 }
 
-ul,
-li {
-  margin: 0;
-  padding: 0;
+.qr-id {
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
-li,
-ol {
-  list-style: none;
-}
-
-.ad li {
-  display: flex;
-  flex-direction: column;
-}
-
-.ad li.last {
-  flex-direction: row;
-}
-
-.ad img {
-  float: left;
-  width: 100%;
-  height: auto;
-  border: 0;
-}
-
-.ad li.last>img {
-  width: 80.4%;
-}
-
-
-.pointer {
-  cursor: pointer;
-}
-
-body.no-scroll {
-  overflow: hidden;
-}
-
-.spacer {
-  flex: 1;
-}
 
 /* landscape 일때 .ad width를 50%로 조절 */
 @media (orientation: landscape) {
@@ -64,10 +107,6 @@ body.no-scroll {
   footer {
     width: 50%;
   }
-}
-
-#chat-widget-container {
-  bottom: 100px !important;
 }
 
 /* width가 600px 미만일 때 처리 */

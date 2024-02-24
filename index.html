@@ -8,11 +8,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="scripts/ad.js"></script>
 		<style>
-			:root {
-				--bg-color: #ff0000;
-				--secondary-color: #0000ff;
-			}
-
 			html,
 			.no-scroll {
 				overflow: hidden;
@@ -27,8 +22,11 @@
 			}
 
 			iframe {
-				flex: 1;
+				flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: calc(100% - var(--footer-height) - 10px);
 				width: 100%;
+        height: calc(100% - var(--footer-height) - 10px);
 			}
 
 			footer {
@@ -36,7 +34,7 @@
         bottom: 0; */
 				display: flex;
 				align-items: center;
-				margin-top: 1rem;
+				margin-top: 10px;
 				flex: 0 0 80px;
 			}
 
@@ -54,10 +52,10 @@
 		<footer>
 			<img class="footer-title" src="images/ad-footer.jpg" />
 			<div class="spacer"></div>
-			<a class="pointer footer-icon" onClick="openQr('wechat')">
+			<a class="pointer footer-icon" onClick="openQr('wechat', '@kakawan1234')">
 				<img src="images/icon-wechat.png" />
 			</a>
-			<a class="pointer footer-icon" onClick="openQr('telegram')">
+			<a class="pointer footer-icon" onClick="openQr('telegram', '@kakawan1234')">
 				<img src="images/icon-telegram.png" />
 			</a>
 		</footer>
