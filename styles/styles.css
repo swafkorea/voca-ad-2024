@@ -106,6 +106,7 @@
 
   footer {
     width: 50%;
+    align-self: center;
   }
 }
 
@@ -113,7 +114,6 @@
 @media (max-width: 600px) {
   footer {
     box-sizing: border-box;
-    padding: 0 10px;
     width: 100%;
   }
 
