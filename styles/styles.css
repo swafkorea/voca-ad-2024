@@ -35,12 +35,17 @@
   ol {
     list-style: none;
   }
+
+  footer {
+    position: relative;
+  }
 }
 
 @layer libs {}
 
 @layer overrides {
   #chat-widget-container {
+    /* position: absolute !important; */
     bottom: 100px !important;
   }
 }
