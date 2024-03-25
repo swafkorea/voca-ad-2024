@@ -46,7 +46,7 @@
 @layer overrides {
   #chat-widget-container {
     /* position: absolute !important; */
-    bottom: 100px !important;
+    /* bottom: 100px !important; */
   }
 }
 
