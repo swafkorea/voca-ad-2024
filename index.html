@@ -37,7 +37,7 @@
 					margin-top: var(--footer-gap);
 					display: flex;
 					align-items: center;
-          justify-content: center;
+					justify-content: center;
 					padding: 0 10px;
 					/* flex: 0 0 var(--footer-height); */
 					align-self: stretch;
@@ -56,9 +56,11 @@
 		</style>
 	</head>
 	<body class="no-scroll">
-		<iframe src="ad.html" frameborder="0"></iframe>
+		<iframe name="content" src="ad.html" frameborder="0"></iframe>
 		<footer id="appFooter">
-			<img class="footer-title" src="images/ad-footer.jpg" />
+			<a href="/ad.html" target="content"
+				><img class="footer-title" src="images/ad-footer.jpg"
+			/></a>
 			<!-- <div class="spacer"></div>
 			<a class="pointer footer-icon" onClick="openQr('wechat')">
 				<img src="images/icon-wechat.png" />
