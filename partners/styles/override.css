@@ -20,6 +20,11 @@ body {
   font-size: var(--font-size);
 }
 
+article a {
+  pointer-events: none;
+  cursor: inherit;
+}
+
 
 header {
   width: 100%;
@@ -52,6 +57,21 @@ header>.page-title {
 
 .page-body {
   width: var(--content-width);
+}
+
+.foot-nav {
+  margin: 1rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.foot-nav::before {
+  content: '«';
+}
+
+.foot-nav a {
+  text-decoration: none;
+  color: yellow;
 }
 
 @media (max-width: 600px) {
