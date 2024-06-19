@@ -1,0 +1,44 @@
+:root {
+  --margin-width: minmax(96px, 1fr);
+  --content-width: 708px;
+}
+
+@media only screen {
+  body {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+body {
+  white-space: initial;
+  background-color: rgb(25, 25, 25);
+  color: rgba(255, 255, 255, 0.81);
+}
+
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header>.page-title {
+  display: block;
+  width: var(--content-width);
+  min-width: var(--content-width);
+  margin: 0;
+  margin-top: 1.5rem;
+}
+
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-body {
+  width: 708px;
+}
