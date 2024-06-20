@@ -15,16 +15,19 @@
 				}
 
 				body {
-					/* display: flex;
+					display: flex;
 					flex-direction: column;
 					justify-content: stretch;
-					align-items: center; */
+					align-items: center;
 					height: 100dvh;
 				}
 
 				iframe {
+					flex-grow: 1;
+					flex-shrink: 0;
+					flex-basis: calc(100% - var(--footer-height) - var(--footer-gap));
 					width: 100%;
-          height: 100%;
+					height: calc(100% - var(--footer-height) - var(--footer-gap));
 				}
 
 				footer {
@@ -54,5 +57,17 @@
 	</head>
 	<body class="no-scroll">
 		<iframe name="content" src="ad.html" frameborder="0"></iframe>
+		<footer id="appFooter">
+			<a href="./ad.html" target="content"
+				><img class="footer-title" src="images/ad-footer.jpg"
+			/></a>
+			<div class="spacer"></div>
+			<a class="pointer footer-icon" onClick="openQr('wechat')">
+				<img src="images/icon-wechat.png" />
+			</a>
+			<a class="pointer footer-icon" onClick="openQr('telegram')">
+				<img src="images/icon-telegram.png" />
+			</a>
+		</footer>
 	</body>
 </html>
