@@ -30,3 +30,20 @@ function openQr(type, userId) {
 		inputAutoFocus: false,
 	});
 }
+
+function copyText(id) {
+  console.log('Copying:', id);
+  const text = document.getElementById(id)?.innerText;
+  if (!text) return;
+
+  console.log('Copied:', text);
+
+  window.navigator.clipboard.writeText(text);
+
+  Swal.fire({
+    icon: 'success',
+    title: 'Copied!',
+    showConfirmButton: false,
+    timer: 1000,
+  });
+}
