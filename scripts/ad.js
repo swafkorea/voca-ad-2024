@@ -1,5 +1,5 @@
 const userIds = {
-	wechat: 'xiaohe88997',
+	wechat: 'kakawan1234',
 	telegram: 'kakawan1234',
 };
 

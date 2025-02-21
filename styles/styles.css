@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 :root {
-  --bg-color: #f9f7f7;
+  --bg-color: #00056a;
   --footer-height: 80px;
   --footer-gap: 10px;
 }
@@ -51,6 +51,45 @@
 }
 
 @layer utils {
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ad-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ad-container img {
+    display: block;
+  }
+
+  .ad-container .links {
+    background-color: #f1f0f6;
+  }
+
+  .ad-container .links .left,
+  .ad-container .links .right {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  .ad-container .links .right {
+    align-items: flex-end;
+  }
+
+  .ad-container .bottom .right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row .buttons {
+    justify-content: center;
+  }
+
   .ad li {
     display: flex;
     flex-direction: column;
@@ -60,7 +99,7 @@
     flex-direction: row;
   }
 
-  .ad img {
+  ul.ad img {
     float: left;
     width: 100%;
     height: auto;
